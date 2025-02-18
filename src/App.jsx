@@ -64,8 +64,9 @@ function App() {
                   alert("시간과 분을 입력해주세요")
                   return;
               }
+              const newId = Date.now();
+              localStorage.setItem('times', JSON.stringify([...db, { id: newId, hour, minute }]));
               setComplete(!complete)
-              localStorage.setItem('times', JSON.stringify([...db, {id: db.length + 1, hour, minute}]))
           }}>추가
           </button>
           {db && db.map((item) => {
@@ -73,8 +74,8 @@ function App() {
                   <div className={"card"} key={item.id}>
                       <p>{item.hour}시 {item.minute}분</p>
                       <button onClick={() => {
-                          setComplete(!complete)
                           localStorage.setItem('times', JSON.stringify(db.filter(item2 => item2.id !== item.id)));
+                          setComplete(!complete)
                       }}>삭제
                       </button>
                   </div>
