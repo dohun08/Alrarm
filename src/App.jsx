@@ -23,9 +23,12 @@ function App() {
         db.forEach((item)=>{
             if (now.getHours() === Number(item.hour) && now.getMinutes() === Number(item.minute) && !isComplete.current) {
                 playAlarm();
-                correct.map((item)=>{
+                correct.map((item, idx)=>{
                     if (item.id === randomNumber.current) {
-                        console.log(item.image)
+                        if(item.answer === null){
+                            setImgSrc(correct[idx + 1].image)
+                            setCorrectAnswer(correct[idx + 1].answer)
+                        }
                         setImgSrc(item.image)
                         setCorrectAnswer(item.answer)
                     }

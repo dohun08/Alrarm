@@ -62,5 +62,28 @@ export const correct = [
     { id: 98, image: '/image/problem/98.png', answer: 16 },
     { id: 99, image: '/image/problem/99.png', answer: 0 },
     { id: 100, image: '/image/problem/100.png', answer: 3 },
-    { id: 101, image: '/image/problem/101.png', answer: 7/2 }
+    { id: 101, image: '/image/problem/101.png', answer: 7/2 },
+    { id: 102, image: '/image/problem/102.png', answer: 81 }, // 예시로 추가된 항목
+    { id: 103, image: '/image/problem/103.png', answer: 1 }, // 예시로 추가된 항목
+    { id: 104, image: '/image/problem/104.png', answer: 1/16 }, // 예시로 추가된 항목
+    { id: 105, image: '/image/problem/105.png', answer: null }, // 예시로 추가된 항목 얘는 좀 잠시만유
+    { id: 106, image: '/image/problem/106.png', answer: 3 }, // 예시로 추가된 항목
+    { id: 107, image: '/image/problem/107.png', answer: 4 }, // 예시로 추가된 항목
+    { id: 108, image: '/image/problem/108.png', answer: 1 }, // 예시로 추가된 항목
+    { id: 109, image: '/image/problem/109.png', answer: 26 }, // 예시로 추가된 항목
+    { id: 110, image: '/image/problem/110.png', answer: 4 }, // 예시로 추가된 항목
+    { id: 111, image: '/image/problem/111.png', answer: 1 }, // 예시로 추가된 항목
+    { id: 112, image: '/image/problem/112.png', answer: 56 }, // 예시로 추가된 항목
+    { id: 113, image: '/image/problem/113.png', answer: 4 }, // 예시로 추가된 항목
+    { id: 114, image: '/image/problem/114.png', answer: 24 }, // 예시로 추가된 항목
+    { id: 115, image: '/image/problem/115.png', answer: 5 }, // 예시로 추가된 항목
+    { id: 116, image: '/image/problem/116.png', answer: "4루트2" }, // 예시로 추가된 항목
+    { id: 117, image: '/image/problem/117.png', answer: 2 }, // 예시로 추가된 항목
+    { id: 118, image: '/image/problem/118.png', answer: 3 }, // 예시로 추가된 항목
+    { id: 119, image: '/image/problem/119.png', answer: 7 }, // 예시로 추가된 항목
+    { id: 120, image: '/image/problem/120.png', answer: 12 }, // 예시로 추가된 항목
+    { id: 121, image: '/image/problem/121.png', answer: 648 }, // 예시로 추가된 항목
+    { id: 122, image: '/image/problem/122.png', answer: 51/2 }, // 예시로 추가된 항목
+    { id: 123, image: '/image/problem/123.png', answer: 4 }, // 예시로 추가된 항목
+    { id: 124, image: '/image/problem/124.png', answer: 13 }  // 예시로 추가된 항목
 ];
