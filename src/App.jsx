@@ -23,11 +23,12 @@ function App() {
         db.forEach((item)=>{
             if (now.getHours() === Number(item.hour) && now.getMinutes() === Number(item.minute) && !isComplete.current) {
                 playAlarm();
-                correct.map((item, idx)=>{
+
+                correct.map((item)=>{
                     if (item.id === randomNumber.current) {
                         if(item.answer === null){
-                            setImgSrc(correct[idx + 1].image)
-                            setCorrectAnswer(correct[idx + 1].answer)
+                            setImgSrc(correct[item.id + 1].image)
+                            setCorrectAnswer(correct[item.id + 1].answer)
                         }
                         setImgSrc(item.image)
                         setCorrectAnswer(item.answer)
@@ -44,7 +45,7 @@ function App() {
         audioRef.current.play();
     }
     useEffect(() => {
-        const interval = setInterval(checkTimeAndPlayAlarm, 60000);
+        const interval = setInterval(checkTimeAndPlayAlarm, 40000);
         return () => clearInterval(interval);
     }, [db]);
 
