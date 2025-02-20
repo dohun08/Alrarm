@@ -12,7 +12,7 @@ function App() {
     const [imgSrc, setImgSrc] = useState();
     const [answer, setAnswer] = useState('');
     const [correctAnswer, setCorrectAnswer] = useState('');
-    const isComplete = useRef(false);
+
     useEffect(() => {
         setDb(JSON.parse(localStorage.getItem('times')) || [])
     }, [complete]);
@@ -21,7 +21,7 @@ function App() {
     function checkTimeAndPlayAlarm() {
         const now = new Date();
         db.forEach((item)=>{
-            if (now.getHours() === Number(item.hour) && now.getMinutes() === Number(item.minute) && !isComplete.current) {
+            if (now.getHours() === Number(item.hour) && now.getMinutes() === Number(item.minute) ) {
                 playAlarm();
 
                 correct.map((item)=>{
@@ -34,8 +34,6 @@ function App() {
                         setCorrectAnswer(item.answer)
                     }
                 })
-            }else{
-                isComplete.current = false
             }
         })
     }
@@ -45,7 +43,7 @@ function App() {
         audioRef.current.play();
     }
     useEffect(() => {
-        const interval = setInterval(checkTimeAndPlayAlarm, 40000);
+        const interval = setInterval(checkTimeAndPlayAlarm, 30000);
         return () => clearInterval(interval);
     }, [db]);
 
@@ -97,7 +95,6 @@ function App() {
                       setAnswer('');
                       setCorrectAnswer('');
                       randomNumber.current = Math.floor(Math.random() * (101 - 38 + 1)) + 38;
-                      isComplete.current = true
                       alert("정답")
                   } else {
                       alert("틀렸습니다")
