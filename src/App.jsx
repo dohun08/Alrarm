@@ -43,7 +43,7 @@ function App() {
         audioRef.current.play();
     }
     useEffect(() => {
-        const interval = setInterval(checkTimeAndPlayAlarm, 30000);
+        const interval = setInterval(checkTimeAndPlayAlarm, 60000);
         return () => clearInterval(interval);
     }, [db]);
 
@@ -91,7 +91,8 @@ function App() {
               <input className={"input"} type={'text'} value={answer} onChange={(e) => setAnswer(e.target.value)}/>
               <button onClick={() => {
                   if (answer === String(correctAnswer)) {
-                      audioRef.current.pause()
+                      audioRef.current.pause();
+                      audioRef.current.currentTime = 0;
                       setAnswer('');
                       setCorrectAnswer('');
                       randomNumber.current = Math.floor(Math.random() * (101 - 38 + 1)) + 38;
