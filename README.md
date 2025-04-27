@@ -1,8 +1,4 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 수학문제 알람 웹
+알람 시간을 설정해놓았을때
+그 시간이 되면 수학문제가 뜨면서 알람소리가 울리게됩니다.
+수학문제를 풀어 정답이라면 알람이 멈추게 됩니다.
